@@ -3,9 +3,22 @@ const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 
 
-menuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('nav__links--active');
+menuBtn.addEventListener("click", (e) => {
+  navLinks.classList.toggle("open");
+  menuBtnIcon.classList.toggle("ri-close-line");
+  menuBtnIcon.classList.toggle("ri-menu-line");
 });
+
+navLinks.addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
+    navLinks.classList.remove("open");
+    menuBtnIcon.classList.remove("ri-close-line");
+    menuBtnIcon.classList.add("ri-menu-line");
+  }
+});
+
+
+
 
 button.addEventListener("click",()=>{
   window.open('products.html');
