@@ -3,6 +3,9 @@ const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 
 
+
+
+
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
   menuBtnIcon.classList.toggle("ri-close-line");
