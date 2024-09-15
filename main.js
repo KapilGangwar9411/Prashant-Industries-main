@@ -1,13 +1,32 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
+//for global presence
+const dots = document.querySelectorAll('.dot');
 
+        dots.forEach(dot => {
+            dot.addEventListener('mouseover', function() {
+                const tooltip = document.createElement('div');
+                tooltip.classList.add('tooltip');
+                tooltip.innerText = this.dataset.location;
+                this.appendChild(tooltip);
+            });
 
+            dot.addEventListener('mouseout', function() {
+                const tooltip = this.querySelector('.tooltip');
+                if (tooltip) {
+                    tooltip.remove();
+                }
+            });
+        });
+
+        
 //for expanding information of industries
 function toggleInfo(element) {
   const industryInfo = element.nextElementSibling;  // Get the next sibling (the .industry-info div)
   industryInfo.style.display = industryInfo.style.display === "block" ? "none" : "block"; // Toggle display
 }
+
 
 
 

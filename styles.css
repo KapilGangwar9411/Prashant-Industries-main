@@ -16,6 +16,95 @@
   box-sizing: border-box;
 }
 
+/*css header new*/
+/* Header Styling */
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo Styling */
+.nav__logo img {
+  max-height: 50px;
+}
+
+/* Navigation Links */
+.nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0077b6;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: #004b72; /* Darker shade for hover effect */
+}
+
+/* Mobile Menu Button */
+.nav__menu__btn {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #0077b6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav__links {
+    display: none;
+  }
+  
+  .nav__menu__btn {
+    display: block;
+  }
+
+  /* Mobile Menu Active State */
+  .nav__links.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav__item {
+    margin: 1rem 0;
+  }
+
+  .nav__link {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* css header new ends*/
+
+
 .header{
   position: fixed;
   top: 0;
@@ -288,56 +377,157 @@ nav {
   font-weight: 500;
 }
 
+/* about frp css */
+
+
+
+/* About Us page */
+.para2{
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+
+}
+
+/* footer logo */
+.footer__logo{
+  height: 20%;
+  width: 20%;
+}
+/* stats page css */
+
 .stats {
   background-color: var(--secondary-color-light);
+  padding: 1rem 0;
 }
 
 .stats__container {
-  display: grid;
- grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stats__content .section__subheader {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
 }
 
 .stats__content .section__header {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: var(--text-dark);
 }
 
 .stats__content .para {
   margin-bottom: 2rem;
   color: var(--text-light);
+  line-height: 1.6;
 }
 
 .stats__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stats__card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  flex: 1;
+  min-width: 240px; /* Minimum width for cards */
+  margin-bottom: 1rem;
+}
+
+.stats__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .stats__card span {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   color: var(--primary-color);
 }
 
 .stats__card h4 {
-  font-size: 2rem;
+  font-size: 1.75rem;
+  margin: 0.5rem 0;
   font-weight: 700;
+  color: var(--text-dark);
 }
 
 .stats__card p {
+  font-size: 1rem;
+  color: var(--text-light);
   font-weight: 500;
 }
 
-.stats__image {
-  display: grid;
-  gap: 2rem;
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .stats__grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats__card {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 400px;
+  }
+
+  .stats__content .section__header {
+    font-size: 2rem;
+  }
+
+  .stats__content .para {
+    font-size: 1rem;
+  }
 }
 
-.stats__image img {
-  max-width: 450px;
-  margin: auto;
-  border-radius: 5px;
+@media screen and (max-width: 480px) {
+  .stats__content .section__header {
+    font-size: 1.8rem;
+  }
+
+  .stats__content .para {
+    font-size: 0.9rem;
+  }
+
+  .stats__card {
+    padding: 1rem;
+  }
+
+  .stats__card span {
+    font-size: 2rem;
+  }
+
+  .stats__card h4 {
+    font-size: 1.5rem;
+  }
+
+  .stats__card p {
+    font-size: 0.9rem;
+  }
 }
 
+
+/* stats css ends */
+
+
+
+/* uncompromising quality section css */
 .banner {
   background-image: linear-gradient(
       to right,
@@ -348,7 +538,92 @@ nav {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  min-height: 250px;       
+  text-align: center;       
 }
+
+.banner__container {
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/*some neon hover effect*/
+
+.banner__content {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(58, 150, 221, 0.6),
+              0 0 15px rgba(58, 150, 221, 0.4),
+              inset 0 0 8px rgba(58, 150, 221, 0.6);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.banner__content:hover {
+  box-shadow: 0 0 10px rgba(58, 150, 221, 0.8),
+              0 0 20px rgba(58, 150, 221, 0.6),
+              inset 0 0 10px rgba(58, 150, 221, 0.8);
+}
+
+
+.banner__content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section__header3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.para {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 5px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+@media screen and (max-width: 768px) {
+  .section__header {
+    font-size: 1.6rem;
+  }
+
+  .para {
+    font-size: 0.9rem;
+  }
+
+  .banner {
+    padding: 40px 10px;
+  }
+
+  .banner__content {
+    padding: 15px;
+  }
+}
+
+/*uncompromising quality css ends here */
+
+
+
+
+
  /* about frp products section */
 .about_frp{
   width: 100%;
@@ -828,7 +1103,7 @@ h2 {
 /* Logo Moving*/
 .logo-carousel {
   background-color: #f5f5f5;
-  padding: 2rem 0;
+  padding: 2rem ;
   overflow: hidden; /* Hide overflow */
 }
 
@@ -878,7 +1153,88 @@ h2 {
 
 
 
+/* Global Presence Section Styling */
+.global-presence {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #fff;
+}
 
+.global-presence h2 {
+  font-size: 36px;
+  color: #003366;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.global-presence .description {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.global-presence .map-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.global-presence .world-map {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+}
+
+/* Dots on the map */
+.dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #f1c500;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.dot:hover {
+  transform: scale(1.5);
+}
+
+/* Tooltip for showing location */
+.tooltip {
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* Styling for responsiveness */
+@media (max-width: 768px) {
+  .global-presence h2 {
+      font-size: 28px;
+  }
+
+  .global-presence .description {
+      font-size: 16px;
+  }
+
+  .dot {
+      width: 10px;
+      height: 10px;
+  }
+}
 
 
 
