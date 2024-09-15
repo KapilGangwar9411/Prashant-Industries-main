@@ -20,7 +20,10 @@ const dots = document.querySelectorAll('.dot');
             });
         });
 
-        
+// js for maps direction
+
+
+       
 //for expanding information of industries
 function toggleInfo(element) {
   const industryInfo = element.nextElementSibling;  // Get the next sibling (the .industry-info div)

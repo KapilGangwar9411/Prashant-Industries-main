@@ -1237,7 +1237,95 @@ h2 {
 }
 
 
+/* maps for direction*/
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10vh;
+  gap: 5vh; 
+}
+
+
+.location {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Hover effect for location card */
+.location:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading styling */
+.location h2 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Map styling */
+.map {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 15px; /* Space below map */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow for map */
+}
+
+/* Map iframe styling */
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Button styling */
+.get-directions {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effects */
+.get-directions:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .location {
+      max-width: 100%;
+  }
+}
+
+/* maps for direction css ends*/
 
 
 
@@ -1248,7 +1336,6 @@ h2 {
 
 
 /*media Queries */
-/* Responsive */
 @media (max-width: 1200px) {
   .icons-container {
       grid-template-columns: repeat(4, 1fr);
