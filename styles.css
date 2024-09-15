@@ -1243,8 +1243,8 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 10vh;
-  gap: 5vh; 
+  padding: 100px;
+  gap: 20px; 
 }
 
 
