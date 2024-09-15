@@ -3,6 +3,12 @@ const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 
 
+//for expanding information of industries
+function toggleInfo(element) {
+  const industryInfo = element.nextElementSibling;  // Get the next sibling (the .industry-info div)
+  industryInfo.style.display = industryInfo.style.display === "block" ? "none" : "block"; // Toggle display
+}
+
 
 
 

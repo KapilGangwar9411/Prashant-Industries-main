@@ -651,6 +651,10 @@ h4 {
   padding: 30px 10px;
 }
 
+
+
+
+
 /* Industries we Serve Section */
 .industries-section {
   text-align: center;
@@ -678,6 +682,7 @@ h4 {
   width: 250px;
   text-align: center;
   padding: 20px;
+  position: relative;
   transition: transform 0.3s ease;
 }
 
@@ -704,7 +709,21 @@ h4 {
   transform: scale(1.05);
 }
 
-/*products css*/
+.industry-info {
+  display: none;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #ddd;
+  color: #333;
+  text-align: left;
+  font-size: 0.9em;
+  border-radius: 5px;
+}
+
+/*industries we serve css ends*/
+
+/*products page css starts*/
 .products-section {
   text-align: center;
   padding: 50px 20px;
@@ -756,8 +775,11 @@ h4 {
 .product-box:hover {
   transform: scale(1.05);
 }
+/*products page css ends*/
 
-/* why ppillp*/
+
+
+/* why ppillp starts*/
 
 .why-cpe {
   text-align: center;
@@ -800,54 +822,60 @@ h2 {
   margin-top: 10px;
 }
 
+/* why ppillp ends*/
 
 
 /* Logo Moving*/
 .logo-carousel {
   background-color: #f5f5f5;
   padding: 2rem 0;
-  overflow: hidden; /* Hides the overflow of the logos outside the container */
+  overflow: hidden; /* Hide overflow */
 }
 
 .logo-carousel__track {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2rem; /* Adds space between logos */
-  animation: scroll 20s linear infinite; /* Moves the logos continuously */
+  width: max-content; /* Ensures track takes the width of all logos */
+  animation: scroll 30s linear infinite; /* Animation for continuous scroll */
 }
 
 .logo-carousel__slide {
-  min-width: 150px; /* Minimum width of the logos */
-  flex: 0 0 auto; /* Prevents logos from shrinking or growing */
-  opacity: 0.8; /* Slight transparency for aesthetics */
+  min-width: 150px;
+  opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 
 .logo-carousel__slide:hover {
-  opacity: 1; /* Full opacity on hover */
+  opacity: 1;
 }
 
 .logo-carousel__slide img {
-  max-width: 10%; /* Ensures logos do not overflow */
+  width: 100px; /* Set a fixed width for all logos */
+  height: 100px; /* Set a fixed height for all logos */
+  object-fit: contain; /* Ensure logos maintain aspect ratio within the fixed size */
   display: block;
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(100%); /* Start from the right */
+    transform: translateX(0); /* Start from the initial position */
   }
   100% {
-    transform: translateX(-100%); /* Move all the way to the left */
+    transform: translateX(-50%); /* Scroll halfway to trigger the loop */
   }
 }
 
-/* Optional Media Query to handle smaller screens */
+/* Optional Media Query for smaller screens */
 @media (max-width: 768px) {
   .logo-carousel__track {
-    gap: 1rem; /* Smaller gap on mobile */
+    gap: 1rem;
+  }
+
+  .logo-carousel__slide img {
+    width: 100px; /* Smaller width on mobile */
+    height: 75px; /* Smaller height on mobile */
   }
 }
+
 
 
 

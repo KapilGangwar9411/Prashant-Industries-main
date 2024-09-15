@@ -181,22 +181,22 @@
       <h1 class="section-title">Products</h1>
       <div class="products-container">
           <div class="product-box">
-              <img src="/assets/tank-2.png" alt="Field Storage Tanks">
+              <img src="/assets/images/field storage.jpg" alt="Field Storage Tanks">
               <h2>Field Storage Tanks</h2>
               <div class="plus-icon">+</div>
           </div>
           <div class="product-box">
-              <img src="process_equipments.jpg" alt="Process Equipments">
+              <img src="/assets/images/process-equipments.jpg" alt="Process Equipments">
               <h2>Process Equipments</h2>
               <div class="plus-icon">+</div>
           </div>
           <div class="product-box">
-              <img src="pressure_vessels.jpg" alt="High Pressure Vessels">
+              <img src="/assets/images/high-pressure-vessels.jpg" alt="High Pressure Vessels">
               <h2>High Pressure Vessels</h2>
               <div class="plus-icon">+</div>
           </div>
           <div class="product-box">
-              <img src="flake_glass.jpg" alt="Flake Glass Lining">
+              <img src="/assets/images/flake-glass.jpg" alt="Flake Glass Lining">
               <h2>Flake Glass Lining</h2>
               <div class="plus-icon">+</div>
           </div>
@@ -214,31 +214,45 @@
   <br>
 
   <!-- Industries we serve-->
-    <section class="industries-section">
-      <h1 class="section-title">Industries We Serve</h1>
-      <div class="industries-container">
-          <div class="industry-box">
-              <img src="chemical.jpg" alt="Chemical Industry">
-              <h2>Chemical and Allied</h2>
-              <div class="plus-icon">+</div>
-          </div>
-          <div class="industry-box">
-              <img src="water.jpg" alt="Water Treatment Industry">
-              <h2>Water and Waste Water Treatment</h2>
-              <div class="plus-icon">+</div>
-            </div>
-            <div class="industry-box">
-                <img src="metallurgy.jpg" alt="Metallurgy Industry">
-                <h2>Metallurgy</h2>
-                <div class="plus-icon">+</div>
-            </div>
-            <div class="industry-box">
-                <img src="power.jpg" alt="Power Industry">
-                <h2>Power and FGD</h2>
-                <div class="plus-icon">+</div>
-            </div>
+  <section class="industries-section">
+    <h1 class="section-title">Industries We Serve</h1>
+    <div class="industries-container">
+      <div class="industry-box">
+        <img src="/assets/images/chemical.jpg" alt="Chemical Industry">
+        <h2>Chemical and Allied</h2>
+        <div class="plus-icon" onclick="toggleInfo(this)">+</div>
+        <div class="industry-info">
+          <p>Chemical and Allied industries are integral in producing essential goods such as fertilizers, petrochemicals, and more.</p>
         </div>
-    </section>
+      </div>
+      <div class="industry-box">
+        <img src="/assets/images/waste-water.jpg" alt="Water Treatment Industry">
+        <h2>Water and Waste Water Treatment</h2>
+        <div class="plus-icon" onclick="toggleInfo(this)">+</div>
+        <div class="industry-info">
+          <p>Water treatment industry plays a crucial role in providing clean water by treating waste water efficiently.</p>
+        </div>
+      </div>
+      <div class="industry-box">
+        <img src="/assets/images/metallurgy.jpg" alt="Metallurgy Industry">
+        <h2>Metallurgy</h2>
+        <div class="plus-icon" onclick="toggleInfo(this)">+</div>
+        <div class="industry-info">
+          <p>The metallurgy industry focuses on extracting and refining metals, essential for various applications.</p>
+        </div>
+      </div>
+      <div class="industry-box">
+        <img src="/assets/images/power.jpg" alt="Power Industry">
+        <h2>Power and FGD</h2>
+        <div class="plus-icon" onclick="toggleInfo(this)">+</div>
+        <div class="industry-info">
+          <p>The power industry ensures energy generation and distribution, while FGD manages emissions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
 
     <!-- Why PPILLP-->
 
@@ -289,16 +303,45 @@
   </section>
   
 
-  <!-- Moving Logos-->
-  <section class="logo-carousel">
-    <div class="logo-carousel__track">
-      <div class="logo-carousel__slide"><img src="/assets/logos/Indian-Oil.png" alt="Logo 1"></div>
-      <div class="logo-carousel__slide"><img src="/assets/logos/Indian-Oil.png" alt="Logo 2"></div>
-      <div class="logo-carousel__slide"><img src="/assets/logos/Indian-Oil.png" alt="Logo 3"></div>
-      <div class="logo-carousel__slide"><img src="/assets/logos/Indian-Oil.png" alt="Logo 4"></div>
-      <div class="logo-carousel__slide"><img src="/assets/logos/Indian-Oil.png" alt="Logo 5"></div>
-    </div>
-  </section>
+<!-- Moving Logos -->
+<section class="logo-carousel">
+  <div class="logo-carousel__track">
+    <div class="logo-carousel__slide"><img src="/assets/logos/Indian-Oil.png" alt="Logo 1"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/reliance.png" alt="Logo 2"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/jsw.png" alt="Logo 3"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/techlip.png" alt="Logo 4"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/cpcl.png" alt="Logo 5"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/bajaj.png" alt="Logo 1"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/emirates.png" alt="Logo 2"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/essar.png" alt="Logo 3"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/gm.png" alt="Logo 4"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/holiday-inn.png" alt="Logo 5"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/jacobs.png" alt="Logo 5"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/jio.png" alt="Logo 1"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/kawasaki.png" alt="Logo 2"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/mistubishi.png" alt="Logo 3"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/taj.png" alt="Logo 4"></div>
+
+    <!-- Duplicate logos for continuous loop effect -->
+    <div class="logo-carousel__slide"><img src="/assets/logos/Indian-Oil.png" alt="Logo 1"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/reliance.png" alt="Logo 2"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/jsw.png" alt="Logo 3"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/techlip.png" alt="Logo 4"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/cpcl.png" alt="Logo 5"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/bajaj.png" alt="Logo 1"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/emirates.png" alt="Logo 2"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/essar.png" alt="Logo 3"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/gm.png" alt="Logo 4"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/holiday-inn.png" alt="Logo 5"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/jacobs.png" alt="Logo 5"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/jio.png" alt="Logo 1"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/kawasaki.png" alt="Logo 2"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/mistubishi.png" alt="Logo 3"></div>
+    <div class="logo-carousel__slide"><img src="/assets/logos/taj.png" alt="Logo 4"></div>
+  </div>
+</section>
+
+
   
 
 
