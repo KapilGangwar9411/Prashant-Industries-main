@@ -1011,6 +1011,12 @@ h4 {
   padding: 50px 20px;
   background-color: #e0e7ed;
 }
+.products-section2 {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #e0e7ed;
+  margin-top: 7%;
+}
 
 .section-title {
   font-size: 2.5em;
