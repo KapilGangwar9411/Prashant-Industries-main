@@ -455,7 +455,7 @@ nav {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   flex: 1;
-  min-width: 240px; /* Minimum width for cards */
+  min-width: 240px;
   margin-bottom: 1rem;
 }
 
@@ -896,22 +896,19 @@ nav {
 
 
 /* styling for terms&conditions page */
-body {
-  font-family: "Poppins", sans-serif;
-  color: var(--text-light);
-  background-color: var(--secondary-color);
-}
-
 .section__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
   font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 1rem;
 }
 
 .para {
   color: var(--text-light);
   margin-bottom: 1rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 h4 {
@@ -920,7 +917,13 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
+
+
+
+
 /* css for more information about comapnay page */
+
+
 .section__header2{
   display: flex;
   justify-content: center;
@@ -1117,13 +1120,13 @@ h2 {
 .logo-carousel {
   background-color: #f5f5f5;
   padding: 2rem ;
-  overflow: hidden; /* Hide overflow */
+  overflow: hidden;
 }
 
 .logo-carousel__track {
   display: flex;
-  width: max-content; /* Ensures track takes the width of all logos */
-  animation: scroll 30s linear infinite; /* Animation for continuous scroll */
+  width: max-content;
+  animation: scroll 30s linear infinite;
 }
 
 .logo-carousel__slide {
@@ -1137,30 +1140,29 @@ h2 {
 }
 
 .logo-carousel__slide img {
-  width: 100px; /* Set a fixed width for all logos */
-  height: 100px; /* Set a fixed height for all logos */
-  object-fit: contain; /* Ensure logos maintain aspect ratio within the fixed size */
+  width: 100px;
+  height: 100px; 
+  object-fit: contain; 
   display: block;
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(0); /* Start from the initial position */
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* Scroll halfway to trigger the loop */
+    transform: translateX(-50%);
   }
 }
 
-/* Optional Media Query for smaller screens */
 @media (max-width: 768px) {
   .logo-carousel__track {
     gap: 1rem;
   }
 
   .logo-carousel__slide img {
-    width: 100px; /* Smaller width on mobile */
-    height: 75px; /* Smaller height on mobile */
+    width: 100px; 
+    height: 75px; 
   }
 }
 
@@ -1520,4 +1522,70 @@ h2 {
   .nav__menu__btn {
     display: block;
   }
+}
+
+
+
+
+/* contact us page */
+
+.contact__container {
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #f5f5f5, #fff);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact__title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.contact__details {
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact__details h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.contact__text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+.contact__list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #444;
+}
+
+.contact__item i {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-right: 10px;
 }
